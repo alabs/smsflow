@@ -1,0 +1,42 @@
+@import "reset"
+@import "text"
+@import "960"
+
+#header
+  @extend .container_24
+  margin-top: 40px
+
+  #logo
+    @extend .alpha
+    @extend .grid_10
+
+  #navbar
+    @extend .omega
+    @extend .grid_14
+    font-size: 1.5em
+    ul
+      margin-top: 45px
+      li
+        display: inline
+        a
+          color: #000
+          text-decoration: none
+        a:hover
+          text-decoration: underline
+
+#content
+  @extend .container_24
+  margin-top: 50px
+
+  #content-left
+    @extend .grid_14
+    @extend .suffix_2
+    @extend .alpha
+    h1
+      font-size: 3em
+    p
+      font-size: 1.3em
+
+  #content-right
+    @extend .grid_8
+    @extend .omega
