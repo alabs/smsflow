@@ -1,5 +1,29 @@
-# Sample localization file for English. Add more files in this directory for other locales.
-# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
-
 en:
-  hello: "Hello world"
+  login: 'Login'
+  please_fill_the_form: 'Please fill the form'
+  email: 'Email'
+  password: 'Password'
+  remember_me: 'Remember me'
+  signup: 'Signup'
+  password_confirmation: 'Password confirmation'
+  messages: 'Messages'
+  message: 'Message'
+  date: 'Date'
+  
+  mongoid:
+    errors:
+      models:
+        user:
+          attributes:
+            login:
+              invalid: 'user invalid'
+              taken: 'this user is already taken'
+            email:
+              invalid: 'email invalid'
+              taken: 'this email is already taken'
+              blank: 'you  must enter an email'
+              not_found: "We can't find that email"
+            password:
+              blank: 'you must enter a password'
+              too_short: 'is too short (minimum is 4 characters)'
+              confirmation: "doesn't match confirmation"

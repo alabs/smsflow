@@ -1,0 +1,29 @@
+es:
+  login: 'Conectar'
+  please_fill_the_form: 'Por favor rellena el formulario'
+  email: 'Correo electrónico'
+  password: 'Contraseña'
+  remember_me: 'Recuérdame'
+  signup: 'Crear cuenta'
+  password_confirmation: 'Confirmar contraseña'
+  messages: 'Mensajes'
+  message: 'Mensaje'
+  date: 'Fecha'
+  
+  mongoid:
+    errors:
+      models:
+        user:
+          attributes:
+            login:
+              invalid: 'usuario no válido'
+              taken: 'este usuario ya está en uso'
+            email:
+              invalid: 'correo electrónico no válido'
+              taken: 'este correo electrónico ya está en uso'
+              blank: 'tienes que ingresar un correo electrónico'
+              not_found: 'no hemos encontrado ese correo electrónico'
+            password:
+              blank: 'tienes que ingresar una contraseña'
+              too_short: 'es muy corta (mínimo 4 caracteres)'
+              confirmation: 'las contraseñas no coinciden'
