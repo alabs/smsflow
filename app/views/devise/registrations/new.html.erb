@@ -1,0 +1,35 @@
+<% @page_title = t(:signup) %>
+<div id="content-left">
+  <div id="page-title">
+    <h2><%= @page_title %></h2>
+  </div>
+  <div id="signup-form">
+    <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+      <fieldset>
+        <legend><%= t(:please_fill_the_form) %></legend>
+        <div class="form-field">
+          <%= f.label t(:email) %>:<br />
+          <%= f.email_field :email %>
+          <% unless resource.errors[:email].blank? %>
+            <span class="error-message"><%= resource.errors[:email].to_sentence %></span>
+          <% end %>
+        </div>
+        <div class="form-field">
+          <%= f.label t(:password) %>:<br />
+          <%= f.password_field :password %>
+          <% unless resource.errors[:password].blank? %>
+            <span class="error-message"><%= resource.errors[:password].to_sentence %></span>
+          <% end %>
+        </div>
+        <div class="form-field">
+          <%= f.label t(:password_confirmation) %>:<br />
+          <%= f.password_field :password_confirmation %>
+        </div>
+        <div class="form-actions">
+          <%= f.submit @page_title %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div><!-- signup-form -->
+  <%= render :partial => "devise/shared/links" %>
+</div><!-- content-left -->

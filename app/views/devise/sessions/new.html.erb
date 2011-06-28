@@ -1,0 +1,30 @@
+<% @page_title = t(:login) %>
+<div id="content-left">
+  <div id="page-title">
+    <h2><%= @page_title %></h2>
+  </div>
+  <div id="login-form">
+    <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <fieldset>
+        <legend><%= t(:please_fill_the_form) %></legend>
+        <div class="form-field">
+          <%= f.label t(:email) %>:<br />
+          <%= f.email_field :email %>
+        </div>
+        <div class="form-field">
+          <%= f.label t(:password) %>:<br />
+          <%= f.password_field :password %>
+        </div>
+        <div class="form-field">
+          <% if devise_mapping.rememberable? -%>
+            <%= f.check_box :remember_me %> <%= f.label t(:remember_me) %>
+          <% end -%>
+        </div>
+        <div class="form-actions">
+          <%= f.submit @page_title %>
+        </div>
+      </fieldset>
+    <% end %>
+  </div><!-- login-form -->
+  <%= render :partial => "devise/shared/links" %>
+</div><!-- content-left -->
