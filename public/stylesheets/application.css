@@ -84,7 +84,7 @@ body {
   margin-right: auto;
   width: 960px; }
 
-.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, #content #content-right, .grid_9, .grid_10, #header #logo, .grid_11, .grid_12, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, .grid_19, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24 {
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, #header #top-header #accounts, .grid_6, .grid_7, .grid_8, #content #content-right, .grid_9, .grid_10, #header #logo, .grid_11, .grid_12, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main {
   display: inline;
   float: left;
   margin-left: 5px;
@@ -93,10 +93,10 @@ body {
 .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15, .push_16, .pull_16, .push_17, .pull_17, .push_18, .pull_18, .push_19, .pull_19, .push_20, .pull_20, .push_21, .pull_21, .push_22, .pull_22, .push_23, .pull_23 {
   position: relative; }
 
-.alpha, #header #logo, #content #content-left {
+.alpha, #header #top-header #accounts, #header #logo, #content #content-left, #content #content-main {
   margin-left: 0; }
 
-.omega, #header #navbar, #content #content-right {
+.omega, #header #top-header #flash-messages, #header #navbar, #content #content-right, #content #content-main {
   margin-right: 0; }
 
 .container_24 .grid_1, #header .grid_1, #content .grid_1 {
@@ -107,7 +107,7 @@ body {
   width: 110px; }
 .container_24 .grid_4, #header .grid_4, #content .grid_4 {
   width: 150px; }
-.container_24 .grid_5, #header .grid_5, #content .grid_5 {
+.container_24 .grid_5, #header .grid_5, #content .grid_5, .container_24 #header #top-header #accounts, #header #top-header .container_24 #accounts, #header #top-header #accounts, #content #header #top-header #accounts, #header #top-header #content #accounts {
   width: 190px; }
 .container_24 .grid_6, #header .grid_6, #content .grid_6 {
   width: 230px; }
@@ -135,7 +135,7 @@ body {
   width: 670px; }
 .container_24 .grid_18, #header .grid_18, #content .grid_18 {
   width: 710px; }
-.container_24 .grid_19, #header .grid_19, #content .grid_19 {
+.container_24 .grid_19, #header .grid_19, #content .grid_19, .container_24 #header #top-header #flash-messages, #header #top-header .container_24 #flash-messages, #header #top-header #flash-messages, #content #header #top-header #flash-messages, #header #top-header #content #flash-messages {
   width: 750px; }
 .container_24 .grid_20, #header .grid_20, #content .grid_20 {
   width: 790px; }
@@ -145,7 +145,7 @@ body {
   width: 870px; }
 .container_24 .grid_23, #header .grid_23, #content .grid_23 {
   width: 910px; }
-.container_24 .grid_24, #header .grid_24, #content .grid_24 {
+.container_24 .grid_24, #header .grid_24, #content .grid_24, .container_24 #content #content-main, #content .container_24 #content-main, #header #content #content-main, #content #header #content-main, #content #content-main {
   width: 950px; }
 .container_24 .prefix_1, #header .prefix_1, #content .prefix_1 {
   padding-left: 40px; }
@@ -366,23 +366,95 @@ body {
 .clearfix, .container_24, #header, #content {
   zoom: 1; }
 
-#header {
-  margin-top: 40px; }
-  #header #navbar {
-    font-size: 1.5em; }
-    #header #navbar ul {
-      margin-top: 45px; }
-      #header #navbar ul li {
-        display: inline; }
-        #header #navbar ul li a {
-          color: black;
-          text-decoration: none; }
-        #header #navbar ul li a:hover {
-          text-decoration: underline; }
+a {
+  text-decoration: none;
+  color: #416cc4; }
+
+a:hover {
+  text-decoration: underline; }
+
+#header #top-header {
+  margin-top: 10px; }
+  #header #top-header #flash-messages #flash-alert span {
+    background-color: #ff0033; }
+  #header #top-header #flash-messages #flash-notice span {
+    background-color: #66cc00; }
+  #header #top-header #flash-messages #flash-alert span, #header #top-header #flash-messages #flash-notice span {
+    padding: 10px;
+    border: 1px solid #d2d2d2;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em; }
+  #header #top-header #accounts {
+    text-align: right;
+    font-size: 1.2em; }
+    #header #top-header #accounts a {
+      color: #416cc4; }
+    #header #top-header #accounts ul li {
+      display: inline;
+      margin-left: 10px; }
+#header #navbar {
+  text-align: right; }
+  #header #navbar ul li {
+    display: inline;
+    margin-left: 10px; }
+  #header #navbar #main-navbar {
+    font-size: 2.8em; }
+    #header #navbar #main-navbar a {
+      color: #c4416d; }
+  #header #navbar #app-navbar {
+    margin-top: -10px;
+    font-size: 2.2em; }
+    #header #navbar #app-navbar a {
+      color: #6dc441; }
+    #header #navbar #app-navbar ul li {
+      margin-left: 10px; }
 
 #content {
-  margin-top: 50px; }
-  #content #content-left h1 {
-    font-size: 3em; }
-  #content #content-left p {
-    font-size: 1.3em; }
+  margin-top: 20px;
+  font-size: 1.3em; }
+  #content h2 {
+    font-size: 2em; }
+
+#login-form, #signup-form {
+  font-size: 1.3em; }
+  #login-form fieldset, #signup-form fieldset {
+    border: 1px solid #d2d2d2;
+    padding: 20px; }
+  #login-form legend, #signup-form legend {
+    border: 1px solid #d2d2d2;
+    padding: 10px;
+    background: #efefef; }
+  #login-form .form-field, #signup-form .form-field {
+    margin-bottom: 15px; }
+    #login-form .form-field input[type=text], #login-form .form-field input[type=email], #login-form .form-field input[type=password], #login-form .form-field textarea, #signup-form .form-field input[type=text], #signup-form .form-field input[type=email], #signup-form .form-field input[type=password], #signup-form .form-field textarea {
+      border: 1px solid #d2d2d2;
+      padding: 5px;
+      font-weight: normal;
+      width: 270px; }
+    #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus {
+      background-color: #f6f6f6;
+      box-shadow: 0 0 4px #b1b1b1; }
+  #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit] {
+    margin-top: 10px;
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    font-size: 1em; }
+  #login-form .error-message, #signup-form .error-message {
+    font-size: small;
+    color: red; }
+  #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password] {
+    border: 1px solid red; }
+
+#message-list table, #message-list th, #message-list td {
+  border: 1px solid black; }
+#message-list th, #message-list td {
+  padding: 6px; }
+#message-list table {
+  width: 100%; }
+  #message-list table th {
+    width: 70%;
+    color: white;
+    background-color: black; }
