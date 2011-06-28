@@ -1,0 +1,20 @@
+<% @page_title = t(:messages) %>
+<div id="content-main">
+  <div id="page-title">
+    <h2><%= @page_title %></h2>
+  </div>
+  <div id="message-list">
+    <table>
+      <tr>
+        <th><%= t(:message) %></th>
+        <th><%= t(:date) %></th>
+      </tr>
+      <% @messages.each do |message| %>
+        <tr>
+          <td><%= message.body %></td>
+          <td><%= message.created_at.strftime('%d/%m/%Y %R') %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
