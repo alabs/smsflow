@@ -9,32 +9,54 @@
   </head>
   <body>
     <div id="header">
+      <div id="top-header">
+        <div id="flash-messages">
+          <% flash.each do |name, msg| %>
+            <div id="<%= "flash-#{name}" %>">
+              <%= content_tag :span, msg %>
+            </div>
+          <% end %>
+          &nbsp;
+        </div>
+        <div id="accounts">
+          <ul>
+            <% unless user_signed_in? %>
+              <li><%= link_to 'Crear cuenta', new_user_registration_path %></li>
+              <li><%= link_to 'Conectar', new_user_session_path %></li>
+            <% else %>
+              <li><%= link_to 'Mi cuenta', '#' %></li>
+              <li><%= link_to 'Desconectar', destroy_user_session_path %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div><!-- top-header -->
+      <div class="clear"></div>
       <div id="logo">
-        <img src="/images/logo.png" />
+        <%= link_to image_tag('logo.png'), root_path %>
       </div>
       <div id="navbar">
-        <ul>
-          <li><%= link_to 'Inicio', '#' %></li>
-          <li><%= link_to 'Tarifas', '#' %></li>
-          <li><%= link_to 'Desarrolladores', '#' %></li>
-          <li><%= link_to 'Ayuda', '#' %></li>
-          <li><%= link_to 'Contacto', '#' %></li>
-        </ul>
+        <div id="main-navbar">
+          <ul>
+            <li><%= link_to 'Inicio', root_path %></li>
+            <li><%= link_to 'Tarifas', '#' %></li>
+            <li><%= link_to 'API', '#' %></li>
+            <li><%= link_to 'Donar', '#' %></li>
+            <li><%= link_to 'Ayuda', '#' %></li>
+          </ul>
+        </div>
+        <% if user_signed_in? %>
+          <div id="app-navbar">
+            <ul>
+              <li><%= link_to 'Mensajes', messages_path %></li>
+              <li><%= link_to 'Agenda', '#' %></li>
+              <li><%= link_to 'Crédito', '#' %></li>
+            </ul>
+          </div>
+        <% end %>
       </div><!-- navbar -->
     </div><!-- header -->
     <div id="content">
-      <div id="content-left">
-        <h1>Inicio</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
-      <div id="content-right">
-        <h1>Otro</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      </div>
+      <%= yield %>
     </div><!-- content -->
     <div id="footer">
       <div id="copyright">
