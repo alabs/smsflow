@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.0.8'
+gem 'rails', '3.0.9'
 gem 'mongoid'
 gem 'bson_ext'
 gem 'jquery-rails'
@@ -11,6 +11,9 @@ gem 'devise'
 gem 'SystemTimer'
 gem 'redcarpet'
 gem 'exception_notification', :require => 'exception_notifier'
+gem 'tropo-webapi-ruby'
+gem 'sinatra'
+gem 'json'
 group :test, :development do
    gem 'factory_girl_rails'
 end
