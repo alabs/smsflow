@@ -46,4 +46,12 @@ Smsflow::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+  
+  # Configuración para ActionMailer
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => false
+  }
+  
+  # Para Devise
+  config.action_mailer.default_url_options = { :host => 'sms.alabs.es' }
 end

@@ -22,5 +22,13 @@ Smsflow::Application.configure do
 
   # Only use best-standards-support built into browsers
   config.action_dispatch.best_standards_support = :builtin
+  
+  # Configuración para ActionMailer
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => false
+  }
+
+  # Para Devise
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
 
