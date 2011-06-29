@@ -17,8 +17,10 @@ $(function() {
     if($(this).val().length > 140) {
       $('#caracter-counter').addClass('wrong-count');
       $('#caracter-counter').html(140 - charLength);
+      $('#message_submit').attr('disabled', true).css('background-color','grey');
     } else {
       $('#caracter-counter').removeClass('wrong-count');
+      $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
     }
   });
 
