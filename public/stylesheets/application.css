@@ -459,6 +459,8 @@ a:hover {
     border: 1px solid black;
     padding: 10px;
     font-size: 1.8em; }
+  .wrong-count {
+    background-color: red; }
 
 #message-list {
   margin-top: 40px; }

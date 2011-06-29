@@ -12,12 +12,14 @@ $(function() {
     var charLength = $(this).val().length;
     // Displays count
     $('#caracter-counter').html(charLength);
-    console.log(charLength);
     
     // Alerts when 140 characters is reached
     if($(this).val().length > 140) {
-      $('#caracter-counter').html('<strong>Hola apardo.</strong>');
-    } 
+      $('#caracter-counter').addClass('wrong-count');
+      $('#caracter-counter').html(140 - charLength);
+    } else {
+      $('#caracter-counter').removeClass('wrong-count');
+    }
   });
 
 });
