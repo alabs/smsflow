@@ -113,12 +113,15 @@ a:hover
       padding: 5px
       font-weight: normal
       width: 270px 
-    textarea
-      width: 75%
-      font-size: 1.5em
     input:focus, textarea:focus
       background-color: #f6f6f6
       box-shadow: 0 0 4px $border-shadow
+  .message-field textarea
+    font-size: 1.2em
+    padding: 10px
+    @extend .grid_18
+    @extend .alpha
+    @extend .omega
   .form-actions
     input[type=submit]
       margin-top: 10px
@@ -133,7 +136,17 @@ a:hover
   .field_with_errors input[type=text], .field_with_errors input[type=email], .field_with_errors input[type=password]
     border: 1px solid #f00
 
+#send-message-buttons
+  text-align: center
+  @extend .grid_4
+
+  #caracter-counter
+    border: 1px solid #000
+    padding: 10px
+    font-size: 1.8em
+
 #message-list
+  margin-top: 40px
   table, th, td
     border: 1px solid black
   th, td

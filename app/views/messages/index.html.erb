@@ -6,9 +6,18 @@
   <div id="new-message-form">
     <h3><%= t(:send_new_message) %></h3>
     <%= form_for(@message) do |f| %>
-      <div class="form-field">
+      <div class="form-field message-field">
         <%= f.text_area :body, :rows => 4 %>
+        <div id="send-message-buttons">
+          <div id="caracter-counter">
+            123
+          </div>
+          <div id="submit-message-button">
+            <%= f.submit t(:send) %>
+          </div>
+        </div>
       </div>
+      <div class="clear"></div>
     <% end %>
   </div>
   <div id="message-list">

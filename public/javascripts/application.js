@@ -4,5 +4,5 @@ $(function() {
   $("#flash-notice span, #flash-alert span").fadeOut(30000);
   
   // Poner el foco en el formulario en la página de login y registro
-  $("#login-form #user_email, #signup-form #user_email").focus();
+  $("#login-form #user_email, #signup-form #user_email, #new-message-form #message_body").focus();
 });

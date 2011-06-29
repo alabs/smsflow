@@ -84,7 +84,7 @@ body {
   margin-right: auto;
   width: 960px; }
 
-.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, #header #top-header #accounts, .grid_6, .grid_7, .grid_8, #content #content-right, .grid_9, .grid_10, #header #logo, .grid_11, .grid_12, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main {
+.grid_1, .grid_2, .grid_3, .grid_4, #send-message-buttons, .grid_5, #header #top-header #accounts, .grid_6, .grid_7, .grid_8, #content #content-right, .grid_9, .grid_10, #header #logo, .grid_11, .grid_12, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main {
   display: inline;
   float: left;
   margin-left: 5px;
@@ -93,10 +93,10 @@ body {
 .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15, .push_16, .pull_16, .push_17, .pull_17, .push_18, .pull_18, .push_19, .pull_19, .push_20, .pull_20, .push_21, .pull_21, .push_22, .pull_22, .push_23, .pull_23 {
   position: relative; }
 
-.alpha, #header #top-header #accounts, #header #logo, #content #content-left, #content #content-main {
+.alpha, #header #top-header #accounts, #header #logo, #content #content-left, #content #content-main, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea {
   margin-left: 0; }
 
-.omega, #header #top-header #flash-messages, #header #navbar, #content #content-right, #content #content-main {
+.omega, #header #top-header #flash-messages, #header #navbar, #content #content-right, #content #content-main, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea {
   margin-right: 0; }
 
 .container_24 .grid_1, #header .grid_1, #content .grid_1 {
@@ -105,7 +105,7 @@ body {
   width: 70px; }
 .container_24 .grid_3, #header .grid_3, #content .grid_3 {
   width: 110px; }
-.container_24 .grid_4, #header .grid_4, #content .grid_4 {
+.container_24 .grid_4, #header .grid_4, #content .grid_4, .container_24 #send-message-buttons, #header #send-message-buttons, #content #send-message-buttons {
   width: 150px; }
 .container_24 .grid_5, #header .grid_5, #content .grid_5, .container_24 #header #top-header #accounts, #header #top-header .container_24 #accounts, #header #top-header #accounts, #content #header #top-header #accounts, #header #top-header #content #accounts {
   width: 190px; }
@@ -133,7 +133,7 @@ body {
   width: 630px; }
 .container_24 .grid_17, #header .grid_17, #content .grid_17 {
   width: 670px; }
-.container_24 .grid_18, #header .grid_18, #content .grid_18 {
+.container_24 .grid_18, #header .grid_18, #content .grid_18, .container_24 #login-form .message-field textarea, #login-form .message-field .container_24 textarea, #header #login-form .message-field textarea, #login-form .message-field #header textarea, #content #login-form .message-field textarea, #login-form .message-field #content textarea, .container_24 #signup-form .message-field textarea, #signup-form .message-field .container_24 textarea, #header #signup-form .message-field textarea, #signup-form .message-field #header textarea, #content #signup-form .message-field textarea, #signup-form .message-field #content textarea, .container_24 #new-message-form .message-field textarea, #new-message-form .message-field .container_24 textarea, #header #new-message-form .message-field textarea, #new-message-form .message-field #header textarea, #content #new-message-form .message-field textarea, #new-message-form .message-field #content textarea {
   width: 710px; }
 .container_24 .grid_19, #header .grid_19, #content .grid_19, .container_24 #header #top-header #flash-messages, #header #top-header .container_24 #flash-messages, #header #top-header #flash-messages, #content #header #top-header #flash-messages, #header #top-header #content #flash-messages {
   width: 750px; }
@@ -434,12 +434,12 @@ a:hover {
       padding: 5px;
       font-weight: normal;
       width: 270px; }
-    #login-form .form-field textarea, #signup-form .form-field textarea, #new-message-form .form-field textarea {
-      width: 75%;
-      font-size: 1.5em; }
     #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus, #new-message-form .form-field input:focus, #new-message-form .form-field textarea:focus {
       background-color: #f6f6f6;
       box-shadow: 0 0 4px #b1b1b1; }
+  #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea {
+    font-size: 1.2em;
+    padding: 10px; }
   #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit], #new-message-form .form-actions input[type=submit] {
     margin-top: 10px;
     border: 1px solid black;
@@ -453,13 +453,22 @@ a:hover {
   #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password], #new-message-form .field_with_errors input[type=text], #new-message-form .field_with_errors input[type=email], #new-message-form .field_with_errors input[type=password] {
     border: 1px solid red; }
 
-#message-list table, #message-list th, #message-list td {
-  border: 1px solid black; }
-#message-list th, #message-list td {
-  padding: 6px; }
-#message-list table {
-  width: 100%; }
-  #message-list table th {
-    width: 70%;
-    color: white;
-    background-color: black; }
+#send-message-buttons {
+  text-align: center; }
+  #send-message-buttons #caracter-counter {
+    border: 1px solid black;
+    padding: 10px;
+    font-size: 1.8em; }
+
+#message-list {
+  margin-top: 40px; }
+  #message-list table, #message-list th, #message-list td {
+    border: 1px solid black; }
+  #message-list th, #message-list td {
+    padding: 6px; }
+  #message-list table {
+    width: 100%; }
+    #message-list table th {
+      width: 70%;
+      color: white;
+      background-color: black; }
