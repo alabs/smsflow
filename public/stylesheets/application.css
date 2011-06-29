@@ -468,6 +468,8 @@ a:hover {
     font-size: 1em;
     width: 100%;
     height: 70px; }
+  .wrong-count {
+    background-color: red; }
 
 #message-list {
   margin-top: 40px; }

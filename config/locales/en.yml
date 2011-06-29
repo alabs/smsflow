@@ -12,6 +12,7 @@ en:
   you_dont_send_any_messages_yet: "You don't send any message yet"
   sent_messages: 'Sent messages'
   send_new_message: 'Send new message'
+  send: 'Send'
   
   mongoid:
     errors:
