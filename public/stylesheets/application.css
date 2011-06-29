@@ -459,6 +459,8 @@ a:hover {
     border: 1px solid black;
     padding: 10px;
     font-size: 1.8em; }
+  #send-message-buttons .wrong-count {
+    background-color: red; }
   #send-message-buttons #submit-message-button input[type=submit] {
     margin-top: 10px;
     border: 3px solid black;
@@ -468,8 +470,6 @@ a:hover {
     font-size: 1em;
     width: 100%;
     height: 70px; }
-  .wrong-count {
-    background-color: red; }
 
 #message-list {
   margin-top: 40px; }
