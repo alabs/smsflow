@@ -3,18 +3,31 @@
   <div id="page-title">
     <h2><%= @page_title %></h2>
   </div>
+  <div id="new-message-form">
+    <h3><%= t(:send_new_message) %></h3>
+    <%= form_for(@message) do |f| %>
+      <div class="form-field">
+        <%= f.text_area :body, :rows => 4 %>
+      </div>
+    <% end %>
+  </div>
   <div id="message-list">
-    <table>
-      <tr>
-        <th><%= t(:message) %></th>
-        <th><%= t(:date) %></th>
-      </tr>
-      <% @messages.each do |message| %>
+    <h3><%= t(:sent_messages) %></h3>
+    <% if @messages.size > 0 %>
+      <table>
         <tr>
-          <td><%= message.body %></td>
-          <td><%= message.created_at.strftime('%d/%m/%Y %R') %></td>
+          <th><%= t(:message) %></th>
+          <th><%= t(:date) %></th>
         </tr>
-      <% end %>
-    </table>
+        <% @messages.each do |message| %>
+          <tr>
+            <td><%= message.body %></td>
+            <td><%= message.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
+          </tr>
+        <% end %>
+      </table>
+    <% else %>
+      <h3><%= t(:you_dont_send_any_messages_yet) %></h3>
+    <% end %>
   </div>
 </div>

@@ -5,8 +5,10 @@ class Message
 
   field :user_id, :type => Integer
   field :body
-  field :sent, :type => Boolean
+  field :sent, :type => Boolean, :default => false
 
   validates_presence_of :body
   validates_length_of :body, :maximum => 140
+
+  belongs_to :user
 end

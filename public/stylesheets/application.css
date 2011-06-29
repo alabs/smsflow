@@ -415,37 +415,42 @@ a:hover {
   font-size: 1.3em; }
   #content h2 {
     font-size: 2em; }
+  #content h3 {
+    font-size: 1.6em; }
 
-#login-form, #signup-form {
+#login-form, #signup-form, #new-message-form {
   font-size: 1.3em; }
-  #login-form fieldset, #signup-form fieldset {
+  #login-form fieldset, #signup-form fieldset, #new-message-form fieldset {
     border: 1px solid #d2d2d2;
     padding: 20px; }
-  #login-form legend, #signup-form legend {
+  #login-form legend, #signup-form legend, #new-message-form legend {
     border: 1px solid #d2d2d2;
     padding: 10px;
     background: #efefef; }
-  #login-form .form-field, #signup-form .form-field {
+  #login-form .form-field, #signup-form .form-field, #new-message-form .form-field {
     margin-bottom: 15px; }
-    #login-form .form-field input[type=text], #login-form .form-field input[type=email], #login-form .form-field input[type=password], #login-form .form-field textarea, #signup-form .form-field input[type=text], #signup-form .form-field input[type=email], #signup-form .form-field input[type=password], #signup-form .form-field textarea {
+    #login-form .form-field input[type=text], #login-form .form-field input[type=email], #login-form .form-field input[type=password], #login-form .form-field textarea, #signup-form .form-field input[type=text], #signup-form .form-field input[type=email], #signup-form .form-field input[type=password], #signup-form .form-field textarea, #new-message-form .form-field input[type=text], #new-message-form .form-field input[type=email], #new-message-form .form-field input[type=password], #new-message-form .form-field textarea {
       border: 1px solid #d2d2d2;
       padding: 5px;
       font-weight: normal;
       width: 270px; }
-    #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus {
+    #login-form .form-field textarea, #signup-form .form-field textarea, #new-message-form .form-field textarea {
+      width: 75%;
+      font-size: 1.5em; }
+    #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus, #new-message-form .form-field input:focus, #new-message-form .form-field textarea:focus {
       background-color: #f6f6f6;
       box-shadow: 0 0 4px #b1b1b1; }
-  #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit] {
+  #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit], #new-message-form .form-actions input[type=submit] {
     margin-top: 10px;
     border: 1px solid black;
     background-color: black;
     color: white;
     padding: 5px;
     font-size: 1em; }
-  #login-form .error-message, #signup-form .error-message {
+  #login-form .error-message, #signup-form .error-message, #new-message-form .error-message {
     font-size: small;
     color: red; }
-  #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password] {
+  #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password], #new-message-form .field_with_errors input[type=text], #new-message-form .field_with_errors input[type=email], #new-message-form .field_with_errors input[type=password] {
     border: 1px solid red; }
 
 #message-list table, #message-list th, #message-list td {

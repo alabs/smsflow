@@ -7,4 +7,6 @@ class User
          :recoverable, :rememberable, :trackable, :validatable
 
   validates_uniqueness_of :email
+
+  has_many :messages
 end
