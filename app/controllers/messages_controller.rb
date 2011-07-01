@@ -12,7 +12,7 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to(@message, :notice => 'Message was successfully created.')
     else
-      render :action => 'new'
+      render :action => 'index'
     end
   end
 end
