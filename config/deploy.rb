@@ -5,7 +5,6 @@ require 'bundler/capistrano'
 set :application, "smsflow"
 role :web, "peta.alabs.es"
 role :app, "peta.alabs.es"
-role :db,  "peta.alabs.es", :primary => true
 
 # server details
 default_run_options[:pty] = true
