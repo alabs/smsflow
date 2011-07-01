@@ -96,6 +96,29 @@ a:hover
     @extend .grid_24
     @extend .alpha
     @extend .omega
+
+#video-intro
+  @extend .grid_24
+  @extend .alpha
+  @extend .omega
+  text-align: center
+  margin-top: 20px
+
+#home-columns
+  #home-column-left, #home-column-middle, #home-column-right
+    margin-top: 40px
+    @extend .grid_8
+    h2
+      font-size: 1.3em
+      color: $link-second-color
+    p
+      margin-top: -20px
+      font-size: .9em
+      padding: 6px
+  #home-column-left
+    @extend .alpha
+  #home-column-right
+    @extend .right
       
 #login-form, #signup-form, #new-message-form
   font-size: 1.3em
@@ -170,3 +193,23 @@ a:hover
       width: 70%
       color: #fff
       background-color: #000
+
+#footer
+  @extend .container_24
+  margin-top: 30px
+  margin-bottom: 20px
+  padding-top: 20px
+  border-top: 1px solid $border-main-color
+  #footer-links
+    @extend .grid_18
+    @extend .alpha
+    ul
+      li
+        display: inline
+        margin-left: 0px
+        margin-right: 10px
+        
+  #powered
+    @extend .grid_6
+    @extend .omega
+    text-align: right

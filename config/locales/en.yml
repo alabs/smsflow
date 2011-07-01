@@ -13,6 +13,21 @@ en:
   sent_messages: 'Sent messages'
   send_new_message: 'Send new message'
   send: 'Send'
+  licensed_under_gnu_affero: 'Licensed under GNU Affero'
+  about: 'About'
+  terms_of_use: 'Terms of use'
+  privacy_policy: 'Privacy policy'
+  powered_by_alabs: 'Powered by aLabs'
+  rates: 'Rates'
+  developers: 'Developers'
+  help: 'Help'
+  its_the_best: "It's the best"
+  its_the_most_cheaper: "It's the most cheaper"
+  its_free: "It's free"
+  create_account: 'Create account'
+  login: 'Login'
+  my_account: 'My account'
+  logout: 'Logout'
   
   mongoid:
     errors:

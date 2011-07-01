@@ -21,11 +21,11 @@
         <div id="accounts">
           <ul>
             <% unless user_signed_in? %>
-              <li><%= link_to 'Crear cuenta', new_user_registration_path %></li>
-              <li><%= link_to 'Conectar', new_user_session_path %></li>
+              <li><%= link_to t(:create_account), new_user_registration_path %></li>
+              <li><%= link_to t(:login), new_user_session_path %></li>
             <% else %>
-              <li><%= link_to 'Mi cuenta', '#' %></li>
-              <li><%= link_to 'Desconectar', destroy_user_session_path %></li>
+              <li><%= link_to t(:my_account), '#' %></li>
+              <li><%= link_to t(:logout), destroy_user_session_path %></li>
             <% end %>
           </ul>
         </div>
@@ -37,11 +37,9 @@
       <div id="navbar">
         <div id="main-navbar">
           <ul>
-            <li><%= link_to 'Inicio', root_path %></li>
-            <li><%= link_to 'Tarifas', '#' %></li>
-            <li><%= link_to 'API', '#' %></li>
-            <li><%= link_to 'Donar', '#' %></li>
-            <li><%= link_to 'Ayuda', '#' %></li>
+            <li><%= link_to t(:rates), '#' %></li>
+            <li><%= link_to t(:developers), '#' %></li>
+            <li><%= link_to t(:help), '#' %></li>
           </ul>
         </div>
         <% if user_signed_in? %>
@@ -59,9 +57,17 @@
       <%= yield %>
     </div><!-- content -->
     <div id="footer">
-      <div id="copyright">
+      <div id="footer-links">
+        <ul>
+          <li>Copyright &copy; <%= Time.now.year %> aLabs</li>
+          <li><%= t(:licensed_under_gnu_affero) %></li>
+          <li><%= t(:about) %></li>
+          <li><%= t(:terms_of_use) %></li>
+          <li><%= t(:privacy_policy) %></li>
+        </ul>
       </div>
-      <div id="privacy-terms">
+      <div id="powered">
+        <%= t(:powered_by_alabs) %>
       </div>
     </div><!-- footer -->
   </body>
