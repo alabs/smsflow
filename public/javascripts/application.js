@@ -24,4 +24,25 @@ $(function() {
     }
   });
 
+  // slideshow en la home (inicio)
+  var buttons = { 
+    previous:$('#lofslidecontent45 .lof-previous'),
+    next:$('#lofslidecontent45 .lof-next') 
+  };
+
+  $obj = $('#lofslidecontent45').lofJSidernews( {
+    interval : 4000,
+    direction       : 'opacitys',
+    easing          : 'easeInOutExpo',
+    duration        : 1200,
+    auto            : false,
+    maxItemDisplay  : 4,
+    navPosition     : 'horizontal',
+    navigatorHeight : 32,
+    navigatorWidth  : 80,
+    mainWidth:980,
+    buttons         : buttons
+  });
+  // slideshow en la home (final)
+
 });
