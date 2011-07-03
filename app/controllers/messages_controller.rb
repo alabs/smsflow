@@ -9,8 +9,9 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.new(params[:message])
+    @message.user = current_user
     if @message.save
-      redirect_to(@message, :notice => 'Message was successfully created.')
+      redirect_to(messages_url, :notice => 'Message was successfully created.')
     else
       render :action => 'new'
     end
