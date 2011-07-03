@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
  
   # esto empezará a funcionar en la versión 2
   #before_filter :set_locale
+  
+  # para el redirect tras el login
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || messages_path
+  end
 
   private
 
