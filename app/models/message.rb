@@ -4,6 +4,7 @@ class Message
   include Mongoid::Timestamps
 
   field :user_id, :type => Integer
+  field :destination
   field :body
   field :sent, :type => Boolean, :default => false
 

@@ -494,9 +494,14 @@ a:hover {
   #message-list table {
     width: 100%; }
     #message-list table th {
-      width: 80%;
       color: white;
       background-color: black; }
+    #message-list table th#mdestination {
+      width: 15%; }
+    #message-list table th#mbody {
+      width: 67%; }
+    #message-list table th#mdate {
+      width: 17%; }
 
 #footer {
   margin-top: 30px;

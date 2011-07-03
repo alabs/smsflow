@@ -29,6 +29,7 @@ es:
   my_account: 'Mi cuenta'
   logout: 'Desconectar'
   api: 'API'
+  destination: 'Destino'
   
   mongoid:
     errors:

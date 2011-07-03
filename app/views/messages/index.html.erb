@@ -25,11 +25,13 @@
     <% if @messages.size > 0 %>
       <table>
         <tr>
-          <th><%= t(:message) %></th>
-          <th><%= t(:date) %></th>
+          <th id="mdestination"><%= t(:destination) %></th>
+          <th id="mbody"><%= t(:message) %></th>
+          <th id="mdate"><%= t(:date) %></th>
         </tr>
         <% @messages.each do |message| %>
           <tr>
+            <td>+<%= message.destination %></td>
             <td><%= message.body %></td>
             <td><%= message.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
           </tr>
