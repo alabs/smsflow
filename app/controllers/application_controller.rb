@@ -1,8 +1,9 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery
-  
-  before_filter :set_locale
+ 
+  # esto empezará a funcionar en la versión 2
+  #before_filter :set_locale
 
   private
 
