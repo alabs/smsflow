@@ -28,6 +28,7 @@ en:
   login: 'Login'
   my_account: 'My account'
   logout: 'Logout'
+  api: 'API'
   
   mongoid:
     errors:

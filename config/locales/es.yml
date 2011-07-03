@@ -28,6 +28,7 @@ es:
   login: 'Conectar'
   my_account: 'Mi cuenta'
   logout: 'Desconectar'
+  api: 'API'
   
   mongoid:
     errors:
