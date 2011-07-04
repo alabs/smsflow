@@ -5,6 +5,7 @@ Smsflow::Application.routes.draw do
     root :to => 'messages#index'
   end
   resources :messages
+  mount Resque::Server.new, :at => '/queues'
   #mount Api::V1::App.new, :at => '/api/v1'
   root :to => 'pages#index'
 end

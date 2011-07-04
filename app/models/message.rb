@@ -14,24 +14,11 @@ class Message
 
   belongs_to :user
 
-  before_save :send_to_tropo
+  before_save :send_message
 
   private
 
-  def send_to_tropo
-    sess = Patron::Session.new
-    sess.timeout = 20
-    sess.base_url = 'http://api.tropo.com'
-    sess.headers['User-Agent'] = 'smsflow/1.0'
-
-    tropo_token = '037ca9435ed55142a45b27c68cea1b608ebd61f00a8ad415281259dd0d9fc56ee102bc957'
-    destination = self.destination
-    message_body = CGI::escape(self.body)
-
-    resp = sess.get("/1.0/sessions?action=create&token=#{tropo_token}&mobile=#{destination}&message=#{message_body}")
-
-    if resp.status == 200
-      self.sent = true
-    end
+  def send_message
+    Resque.enqueue(SmsWorker, self.id)
   end
 end
