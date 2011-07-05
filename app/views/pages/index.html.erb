@@ -1,7 +1,60 @@
 <% @page_title = 'Inicio' %> 
-<div id="video-intro">
-  <iframe class="youtube-player" type="text/html" width="639" height="394" src="http://www.youtube.com/embed/1bCFHTbRnWM" frameborder="0"></iframe>
-</div>
+
+<!-- SLIDESHOW INICIO --> 
+<div id="lofslidecontent45" class="lof-slidecontent" style="width:980px; height:340px;">
+    <div class="preload"><div> </div> </div>
+  
+  <div class="lof-main-outer" style="width:980px; height:340px;">
+    <ul class="lof-main-wapper">
+      <li>
+        <%= image_tag('slides/sms_01.jpg') %>
+        <div class="lof-main-item-desc">
+          <h3><a target="_parent" title="Ipso Lorem" href="#">Ipso Lorem Sit Amet</a></h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
+            <a class="readmore" href="#"> Leer más </a>
+          </p>
+        </div>
+      </li> 
+      <li>
+        <%= image_tag('slides/sms_02.jpg') %>
+        <div class="lof-main-item-desc">
+          <h3><a target="_parent" title="Ipso Lorem" href="#">Ipso Lorem Sit Amet</a></h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
+            <a class="readmore" href="#"> Leer más </a>
+          </p>
+        </div>
+      </li> 
+      <li>
+        <%= image_tag('slides/sms_03.jpg') %>
+        <div class="lof-main-item-desc">
+          <h3><a target="_parent" title="Ipso Lorem" href="#">Ipso Lorem Sit Amet</a></h3>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since...
+            <a class="readmore" href="#"> Leer más </a>
+          </p>
+        </div>
+      </li> 
+    </ul>     
+  </div>
+  
+  <!-- NAVIGATOR -->
+  <div class="lof-navigator-wapper">
+    <div onclick="return false" href="" class="lof-next"></div>
+    <div class="lof-navigator-outer">
+      <ul class="lof-navigator">
+        <li><%= image_tag('slides/sms_01_thumb.jpg') %></li>
+        <li><%= image_tag('slides/sms_02_thumb.jpg') %></li>
+        <li><%= image_tag('slides/sms_03_thumb.jpg') %></li>
+      </ul>
+    </div>
+    <div onclick="return false" href="" class="lof-previous"></div>
+  </div> 
+</div> 
+<!-- SLIDESHOW FINAL --> 
+
+
 <div id="home-columns">
   <div id="home-column-left">
     <h2><%= t(:its_the_best) %></h2>

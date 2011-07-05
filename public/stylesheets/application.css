@@ -84,7 +84,7 @@ body {
   margin-right: auto;
   width: 960px; }
 
-.grid_1, .grid_2, .grid_3, .grid_4, #send-message-buttons, .grid_5, #header #top-header #accounts, .grid_6, #footer #powered, .grid_7, .grid_8, #content #content-right, #home-columns #home-column-left, #home-columns #home-column-middle, #home-columns #home-column-right, .grid_9, .grid_10, #header #logo, .grid_11, .grid_12, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #footer #footer-links, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main, #video-intro {
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, #header #top-header #accounts, .grid_6, #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #send-message-buttons, #footer #powered, .grid_7, .grid_8, #content #content-right, #home-columns #home-column-left, #home-columns #home-column-middle, #home-columns #home-column-right, .grid_9, .grid_10, #header #logo, .grid_11, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #new-new-message-form .message-field textarea, .grid_12, #new-new-message-form #message-form, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, #footer #footer-links, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main, #video-intro {
   display: inline;
   float: left;
   margin-left: 5px;
@@ -93,10 +93,10 @@ body {
 .push_1, .pull_1, .push_2, .pull_2, .push_3, .pull_3, .push_4, .pull_4, .push_5, .pull_5, .push_6, .pull_6, .push_7, .pull_7, .push_8, .pull_8, .push_9, .pull_9, .push_10, .pull_10, .push_11, .pull_11, .push_12, .pull_12, .push_13, .pull_13, .push_14, .pull_14, .push_15, .pull_15, .push_16, .pull_16, .push_17, .pull_17, .push_18, .pull_18, .push_19, .pull_19, .push_20, .pull_20, .push_21, .pull_21, .push_22, .pull_22, .push_23, .pull_23 {
   position: relative; }
 
-.alpha, #header #top-header #accounts, #header #logo, #content #content-left, #content #content-main, #video-intro, #home-columns #home-column-left, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #footer #footer-links {
+.alpha, #header #top-header #accounts, #header #logo, #content #content-left, #content #content-main, #video-intro, #home-columns #home-column-left, #new-new-message-form #message-form, #footer #footer-links {
   margin-left: 0; }
 
-.omega, #header #top-header #flash-messages, #header #navbar, #content #content-right, #content #content-main, #video-intro, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #footer #powered {
+.omega, #header #top-header #flash-messages, #header #navbar, #content #content-right, #content #content-main, #video-intro, #new-new-message-form #send-message-buttons, #footer #powered {
   margin-right: 0; }
 
 .container_24 .grid_1, #header .grid_1, #content .grid_1, #footer .grid_1 {
@@ -105,11 +105,11 @@ body {
   width: 70px; }
 .container_24 .grid_3, #header .grid_3, #content .grid_3, #footer .grid_3 {
   width: 110px; }
-.container_24 .grid_4, #header .grid_4, #content .grid_4, #footer .grid_4, .container_24 #send-message-buttons, #header #send-message-buttons, #content #send-message-buttons, #footer #send-message-buttons {
+.container_24 .grid_4, #header .grid_4, #content .grid_4, #footer .grid_4 {
   width: 150px; }
 .container_24 .grid_5, #header .grid_5, #content .grid_5, #footer .grid_5, .container_24 #header #top-header #accounts, #header #top-header .container_24 #accounts, #header #top-header #accounts, #content #header #top-header #accounts, #header #top-header #content #accounts, #footer #header #top-header #accounts, #header #top-header #footer #accounts {
   width: 190px; }
-.container_24 .grid_6, #header .grid_6, #content .grid_6, #footer .grid_6, .container_24 #footer #powered, #footer .container_24 #powered, #header #footer #powered, #footer #header #powered, #content #footer #powered, #footer #content #powered, #footer #powered {
+.container_24 .grid_6, #header .grid_6, #content .grid_6, #footer .grid_6, .container_24 #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form .container_24 #groups-to-send-the-message-and-rate, #header #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #header #groups-to-send-the-message-and-rate, #content #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #content #groups-to-send-the-message-and-rate, #footer #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #footer #groups-to-send-the-message-and-rate, .container_24 #new-new-message-form #send-message-buttons, #new-new-message-form .container_24 #send-message-buttons, #header #new-new-message-form #send-message-buttons, #new-new-message-form #header #send-message-buttons, #content #new-new-message-form #send-message-buttons, #new-new-message-form #content #send-message-buttons, #footer #new-new-message-form #send-message-buttons, #new-new-message-form #footer #send-message-buttons, .container_24 #footer #powered, #footer .container_24 #powered, #header #footer #powered, #footer #header #powered, #content #footer #powered, #footer #content #powered, #footer #powered {
   width: 230px; }
 .container_24 .grid_7, #header .grid_7, #content .grid_7, #footer .grid_7 {
   width: 270px; }
@@ -119,9 +119,9 @@ body {
   width: 350px; }
 .container_24 .grid_10, #header .grid_10, #content .grid_10, #footer .grid_10, .container_24 #header #logo, #header .container_24 #logo, #header #logo, #content #header #logo, #header #content #logo, #footer #header #logo, #header #footer #logo {
   width: 390px; }
-.container_24 .grid_11, #header .grid_11, #content .grid_11, #footer .grid_11 {
+.container_24 .grid_11, #header .grid_11, #content .grid_11, #footer .grid_11, .container_24 #login-form .message-field textarea, #login-form .message-field .container_24 textarea, #header #login-form .message-field textarea, #login-form .message-field #header textarea, #content #login-form .message-field textarea, #login-form .message-field #content textarea, #footer #login-form .message-field textarea, #login-form .message-field #footer textarea, .container_24 #signup-form .message-field textarea, #signup-form .message-field .container_24 textarea, #header #signup-form .message-field textarea, #signup-form .message-field #header textarea, #content #signup-form .message-field textarea, #signup-form .message-field #content textarea, #footer #signup-form .message-field textarea, #signup-form .message-field #footer textarea, .container_24 #new-message-form .message-field textarea, #new-message-form .message-field .container_24 textarea, #header #new-message-form .message-field textarea, #new-message-form .message-field #header textarea, #content #new-message-form .message-field textarea, #new-message-form .message-field #content textarea, #footer #new-message-form .message-field textarea, #new-message-form .message-field #footer textarea, .container_24 #new-new-message-form .message-field textarea, #new-new-message-form .message-field .container_24 textarea, #header #new-new-message-form .message-field textarea, #new-new-message-form .message-field #header textarea, #content #new-new-message-form .message-field textarea, #new-new-message-form .message-field #content textarea, #footer #new-new-message-form .message-field textarea, #new-new-message-form .message-field #footer textarea {
   width: 430px; }
-.container_24 .grid_12, #header .grid_12, #content .grid_12, #footer .grid_12 {
+.container_24 .grid_12, #header .grid_12, #content .grid_12, #footer .grid_12, .container_24 #new-new-message-form #message-form, #new-new-message-form .container_24 #message-form, #header #new-new-message-form #message-form, #new-new-message-form #header #message-form, #content #new-new-message-form #message-form, #new-new-message-form #content #message-form, #footer #new-new-message-form #message-form, #new-new-message-form #footer #message-form {
   width: 470px; }
 .container_24 .grid_13, #header .grid_13, #content .grid_13, #footer .grid_13 {
   width: 510px; }
@@ -133,7 +133,7 @@ body {
   width: 630px; }
 .container_24 .grid_17, #header .grid_17, #content .grid_17, #footer .grid_17 {
   width: 670px; }
-.container_24 .grid_18, #header .grid_18, #content .grid_18, #footer .grid_18, .container_24 #login-form .message-field textarea, #login-form .message-field .container_24 textarea, #header #login-form .message-field textarea, #login-form .message-field #header textarea, #content #login-form .message-field textarea, #login-form .message-field #content textarea, #footer #login-form .message-field textarea, #login-form .message-field #footer textarea, .container_24 #signup-form .message-field textarea, #signup-form .message-field .container_24 textarea, #header #signup-form .message-field textarea, #signup-form .message-field #header textarea, #content #signup-form .message-field textarea, #signup-form .message-field #content textarea, #footer #signup-form .message-field textarea, #signup-form .message-field #footer textarea, .container_24 #new-message-form .message-field textarea, #new-message-form .message-field .container_24 textarea, #header #new-message-form .message-field textarea, #new-message-form .message-field #header textarea, #content #new-message-form .message-field textarea, #new-message-form .message-field #content textarea, #footer #new-message-form .message-field textarea, #new-message-form .message-field #footer textarea, .container_24 #footer #footer-links, #footer .container_24 #footer-links, #header #footer #footer-links, #footer #header #footer-links, #content #footer #footer-links, #footer #content #footer-links, #footer #footer-links {
+.container_24 .grid_18, #header .grid_18, #content .grid_18, #footer .grid_18, .container_24 #footer #footer-links, #footer .container_24 #footer-links, #header #footer #footer-links, #footer #header #footer-links, #content #footer #footer-links, #footer #content #footer-links, #footer #footer-links {
   width: 710px; }
 .container_24 .grid_19, #header .grid_19, #content .grid_19, #footer .grid_19, .container_24 #header #top-header #flash-messages, #header #top-header .container_24 #flash-messages, #header #top-header #flash-messages, #content #header #top-header #flash-messages, #header #top-header #content #flash-messages, #footer #header #top-header #flash-messages, #header #top-header #footer #flash-messages {
   width: 750px; }
@@ -432,44 +432,44 @@ a:hover {
     font-size: 0.9em;
     padding: 6px; }
 
-#login-form, #signup-form, #new-message-form {
+#login-form, #signup-form, #new-message-form, #new-new-message-form {
   font-size: 1.3em; }
-  #login-form fieldset, #signup-form fieldset, #new-message-form fieldset {
+  #login-form fieldset, #signup-form fieldset, #new-message-form fieldset, #new-new-message-form fieldset {
     border: 1px solid #d2d2d2;
     padding: 20px; }
-  #login-form legend, #signup-form legend, #new-message-form legend {
+  #login-form legend, #signup-form legend, #new-message-form legend, #new-new-message-form legend {
     border: 1px solid #d2d2d2;
     padding: 10px;
     background: #efefef; }
-  #login-form .form-field, #signup-form .form-field, #new-message-form .form-field {
+  #login-form .form-field, #signup-form .form-field, #new-message-form .form-field, #new-new-message-form .form-field {
     margin-bottom: 15px; }
-    #login-form .form-field input[type=text], #login-form .form-field input[type=email], #login-form .form-field input[type=password], #login-form .form-field textarea, #signup-form .form-field input[type=text], #signup-form .form-field input[type=email], #signup-form .form-field input[type=password], #signup-form .form-field textarea, #new-message-form .form-field input[type=text], #new-message-form .form-field input[type=email], #new-message-form .form-field input[type=password], #new-message-form .form-field textarea {
+    #login-form .form-field input[type=text], #login-form .form-field input[type=email], #login-form .form-field input[type=password], #login-form .form-field textarea, #signup-form .form-field input[type=text], #signup-form .form-field input[type=email], #signup-form .form-field input[type=password], #signup-form .form-field textarea, #new-message-form .form-field input[type=text], #new-message-form .form-field input[type=email], #new-message-form .form-field input[type=password], #new-message-form .form-field textarea, #new-new-message-form .form-field input[type=text], #new-new-message-form .form-field input[type=email], #new-new-message-form .form-field input[type=password], #new-new-message-form .form-field textarea {
       border: 1px solid #d2d2d2;
       padding: 5px;
       font-weight: normal;
       width: 270px; }
-    #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus, #new-message-form .form-field input:focus, #new-message-form .form-field textarea:focus {
+    #login-form .form-field input:focus, #login-form .form-field textarea:focus, #signup-form .form-field input:focus, #signup-form .form-field textarea:focus, #new-message-form .form-field input:focus, #new-message-form .form-field textarea:focus, #new-new-message-form .form-field input:focus, #new-new-message-form .form-field textarea:focus {
       background-color: #f6f6f6;
       box-shadow: 0 0 4px #b1b1b1; }
-  #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea {
-    font-size: 1.2em;
+  #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #new-new-message-form .message-field textarea {
+    font-size: 0.8em;
     padding: 10px; }
-  #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit], #new-message-form .form-actions input[type=submit] {
+  #login-form .form-actions input[type=submit], #signup-form .form-actions input[type=submit], #new-message-form .form-actions input[type=submit], #new-new-message-form .form-actions input[type=submit] {
     margin-top: 10px;
     border: 1px solid black;
     background-color: black;
     color: white;
     padding: 5px;
     font-size: 1em; }
-  #login-form .error-message, #signup-form .error-message, #new-message-form .error-message {
+  #login-form .error-message, #signup-form .error-message, #new-message-form .error-message, #new-new-message-form .error-message {
     font-size: small;
     color: red; }
-  #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password], #new-message-form .field_with_errors input[type=text], #new-message-form .field_with_errors input[type=email], #new-message-form .field_with_errors input[type=password] {
+  #login-form .field_with_errors input[type=text], #login-form .field_with_errors input[type=email], #login-form .field_with_errors input[type=password], #signup-form .field_with_errors input[type=text], #signup-form .field_with_errors input[type=email], #signup-form .field_with_errors input[type=password], #new-message-form .field_with_errors input[type=text], #new-message-form .field_with_errors input[type=email], #new-message-form .field_with_errors input[type=password], #new-new-message-form .field_with_errors input[type=text], #new-new-message-form .field_with_errors input[type=email], #new-new-message-form .field_with_errors input[type=password] {
     border: 1px solid red; }
 
 #send-message-buttons {
   text-align: center; }
-  #send-message-buttons #caracter-counter {
+  #send-message-buttons #counter {
     border: 1px solid black;
     padding: 10px;
     font-size: 1.8em; }
@@ -494,9 +494,14 @@ a:hover {
   #message-list table {
     width: 100%; }
     #message-list table th {
-      width: 70%;
       color: white;
       background-color: black; }
+    #message-list table th#mdestination {
+      width: 15%; }
+    #message-list table th#mbody {
+      width: 67%; }
+    #message-list table th#mdate {
+      width: 17%; }
 
 #footer {
   margin-top: 30px;

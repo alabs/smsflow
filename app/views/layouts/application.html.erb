@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <title><%= @page_title %> - SMS Flow</title>
     <%= stylesheet_link_tag 'application' %>
+    <%= stylesheet_link_tag 'jquery.jslidernews.css' %>
     <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag 'jquery.easing' %>
+    <%= javascript_include_tag 'jquery.jslidernews' %>
     <%= csrf_meta_tag %>
   </head>
   <body>
@@ -38,7 +41,6 @@
         <div id="main-navbar">
           <ul>
             <li><%= link_to t(:rates), '#' %></li>
-            <li><%= link_to t(:developers), '#' %></li>
             <li><%= link_to t(:help), '#' %></li>
           </ul>
         </div>
@@ -62,6 +64,7 @@
           <li>Copyright &copy; <%= Time.now.year %> aLabs</li>
           <li><%= t(:licensed_under_gnu_affero) %></li>
           <li><%= t(:about) %></li>
+          <li><%= t(:developers) %></li>
           <li><%= t(:terms_of_use) %></li>
           <li><%= t(:privacy_policy) %></li>
         </ul>
