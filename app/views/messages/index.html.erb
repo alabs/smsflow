@@ -38,7 +38,7 @@
         </tr>
         <% @messages.each do |message| %>
           <tr>
-            <td>+<%= message.destination %></td>
+            <td>+<%= message.recipients %></td>
             <td><%= message.body %></td>
             <td><%= message.created_at.strftime('%d/%m/%Y %H:%M:%S') %></td>
           </tr>
