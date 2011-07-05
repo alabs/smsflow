@@ -26,6 +26,10 @@ class Message
     end
   end
 
+  def recipients
+    self.attributes['recipients'].blank? ? nil : self.attributes['recipients'].join(', ')
+  end
+
   private
 
   def send_message
