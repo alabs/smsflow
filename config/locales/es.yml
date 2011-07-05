@@ -19,7 +19,7 @@ es:
   privacy_policy: 'Política de privacidad'
   powered_by_alabs: 'Manejado por aLabs'
   rates: 'Tarifas'
-  developers: 'Desarrolladorxs'
+  developers: 'Desarrolladores'
   help: 'Ayuda'
   its_the_best: 'Es lo mejor'
   its_the_most_cheaper: 'Es lo más barato'
@@ -30,6 +30,7 @@ es:
   logout: 'Desconectar'
   api: 'API'
   destination: 'Destino'
+  groups: 'Grupos'
   
   mongoid:
     errors:

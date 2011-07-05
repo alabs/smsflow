@@ -1,27 +1,36 @@
 <% @page_title = t(:messages) %>
 <div id="content-main">
-  <div id="page-title">
-    <h2><%= @page_title %></h2>
-  </div>
-  <div id="new-message-form">
+  <div id="new-new-message-form">
     <h3><%= t(:send_new_message) %></h3>
     <%= form_for(@message) do |f| %>
-      <div class="form-field message-field">
-        <%= f.label t(:destination) %>:<br />
-        <%= f.text_field :destination %>
-        <%= f.text_area :body, :rows => 4 %>
-        <div id="send-message-buttons">
-          <div id="caracter-counter">
-            0
-          </div>
-          <div id="submit-message-button">
-            <%= f.submit t(:send) %>
-          </div>
+      <div id="message-form">
+        <div class="form-field message-field">
+          <%= f.text_area :body, :rows => 4 %>
+        </div>
+      </div><!-- message-form -->
+      <div id="groups-to-send-the-message-and-rate">
+        <%= f.label t(:groups) %>:<br />
+        <select>
+          <option value="1">Freaks</option>
+          <option value="2">aLabs</option>
+          <option value="3">Sindominio</option>
+          <option value="4">15hack</option>
+        </select>
+        <div id="rate">
+          <label>Coste de este envio</label>:<br />
+          <span>23€</span>
         </div>
       </div>
-      <div class="clear"></div>
+      <div id="send-message-buttons">
+        <div id="counter">
+          0
+        </div>
+        <div id="submit-message-button">
+          <%= f.submit t(:send) %>
+        </div>
+      </div>
     <% end %>
-  </div>
+  </div><!-- new-new-message-form -->
   <div id="message-list">
     <h3><%= t(:sent_messages) %></h3>
     <% if @messages.size > 0 %>

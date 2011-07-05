@@ -30,6 +30,7 @@ en:
   logout: 'Logout'
   api: 'API'
   destination: 'Destination'
+  groups: 'Groups'
   
   mongoid:
     errors:
