@@ -4,11 +4,9 @@ class Message
   include Mongoid::Timestamps
 
   field :user_id, :type => Integer
-  field :destination
+  field :recipients, :type => Array
   field :body
   field :sent, :type => Boolean, :default => false
-
-  attr_accessor :recipients
 
   validates_presence_of :destination
   validates_presence_of :body
@@ -16,7 +14,7 @@ class Message
 
   belongs_to :user
 
-  before_save :send_message
+  after_save :send_message
 
   private
 
