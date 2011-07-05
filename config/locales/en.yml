@@ -31,6 +31,7 @@ en:
   api: 'API'
   destination: 'Destination'
   groups: 'Groups'
+  recipients: 'Recipients'
   
   mongoid:
     errors:

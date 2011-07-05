@@ -9,13 +9,8 @@
         </div>
       </div><!-- message-form -->
       <div id="groups-to-send-the-message-and-rate">
-        <%= f.label t(:groups) %>:<br />
-        <select>
-          <option value="1">Freaks</option>
-          <option value="2">aLabs</option>
-          <option value="3">Sindominio</option>
-          <option value="4">15hack</option>
-        </select>
+        <%= f.label t(:recipients) %>:<br />
+        <%= f.text_area :recipients, :rows => 4, :cols => 27 %>
         <div id="rate">
           <label>Coste de este envio</label>:<br />
           <span>23€</span>
@@ -31,6 +26,7 @@
       </div>
     <% end %>
   </div><!-- new-new-message-form -->
+  <div class="clear"></div>
   <div id="message-list">
     <h3><%= t(:sent_messages) %></h3>
     <% if @messages.size > 0 %>

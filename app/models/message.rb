@@ -8,6 +8,8 @@ class Message
   field :body
   field :sent, :type => Boolean, :default => false
 
+  attr_accessor :recipients
+
   validates_presence_of :destination
   validates_presence_of :body
   validates_length_of :body, :maximum => 140
