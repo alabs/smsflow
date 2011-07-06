@@ -4,17 +4,31 @@ class Message
   include Mongoid::Timestamps
 
   field :user_id, :type => Integer
-  field :destination
+  field :recipients, :type => Array
   field :body
   field :sent, :type => Boolean, :default => false
 
-  validates_presence_of :destination
+  validates_presence_of :recipients
   validates_presence_of :body
   validates_length_of :body, :maximum => 140
 
   belongs_to :user
 
-  before_save :send_message
+  after_save :send_message
+  
+  def recipients=(args)
+    if args.is_a?(Array)
+      super(args)
+    elsif args.is_a?(String)
+      super(args.gsub(/\s+/, '').split(','))
+    else
+      return nil
+    end
+  end
+
+  def recipients
+    self.attributes['recipients'].blank? ? nil : self.attributes['recipients'].join(', ')
+  end
 
   private
 
