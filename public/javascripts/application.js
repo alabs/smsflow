@@ -112,5 +112,31 @@ $(function() {
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(uv, s);
   })();
 
+  //Placeholder support for html5 non compatible browsers
+  // https://gist.github.com/311373/3639414d4c8e31def46c72307d2d85aa97dab6be
+  if(!jQuery('<input placeholder="1" />')[0].placeholder){
+      jQuery(':input[placeholder]').each(function(){
+          var $this = $(this);
+          if(!$this.val()){
+              $this.val($this.attr('placeholder'));
+              $this.addClass('input-placeholder');
+          }
+      }).live('focus', function(e){
+          var $this = $(this);
+          if($this.hasClass('input-placeholder')){
+              $this.val('');
+              $this.removeClass('input-placeholder');
+          }
+      }).live('blur', function(e){
+          var $this = $(this);
+          if(!$this.val()){
+              $this.addClass('input-placeholder');
+              $this.val($this.attr('placeholder'));
+          }
+      });
+  }
+
+
+
 });
 

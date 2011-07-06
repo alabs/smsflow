@@ -32,6 +32,8 @@ es:
   destination: 'Destino'
   groups: 'Grupos'
   recipients: 'Destinatarios'
+  placeholder_message: 'Escribe aquí el mensaje que quieras enviar'
+  placeholder_recipients: '3466778899           3466778811'
   
   mongoid:
     errors:
