@@ -1,3 +1,28 @@
+function clean_array(arr){
+  // remueve elementos vacios y duplicados de un array
+
+  // 1. elementos vacios
+  new_arr = []; 
+  for (k in arr) {
+    if(arr[k]) {
+      new_arr.push(arr[k]); 
+    } 
+  }
+
+  // 2. duplicados
+  var i,
+    len=new_arr.length,
+    out=[],
+    obj={};
+  for (i=0;i<len;i++) {
+    obj[new_arr[i]]=0;
+  }
+  for (i in obj) {
+    out.push(i);
+  }
+  return out;
+}
+
 $(function() {
   
   // Ocultar el span de mensajes flash pasado 10 segundos
@@ -23,6 +48,40 @@ $(function() {
       $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
     }
   });
+
+  // contador de recipientes, calculador de coste de envio
+  $('#message_recipients').keyup( function(){
+    // convertimos las lineas del textarea en un array
+    var tel_numbers_raw = $(this).val().split('\n');
+    var re = /^\d+$/;
+
+    // limpiamos el array, quitando las lineas vacias y los duplicados
+    tel_numbers = clean_array(tel_numbers_raw);
+    // el contador de los numeros de telefonos, despues de que se quiten los vacios
+    var count = tel_numbers.length ;
+
+    for (var i = 0; i < count; i++){
+      // comprobamos que se trate de un numero limpio
+      var result = re.test(tel_numbers[i]);
+      if(result) {
+        // si todos los numeros estan bien, calculamos el envio
+        // TODO: pedir por API el coste de los SMS
+        var cost = parseFloat(count * 0.05).toFixed(2);
+        $('#rate span').html(cost + ' €');
+        // habilitamos el envio
+        $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
+      } else {
+        // si el numero es invalido, avisamos al usuario
+        $('#rate span').html('Invalido ' + tel_numbers[i]);
+        // y deshabilitamos el envio
+        $('#message_submit').attr('disabled', true).css('background-color','grey');
+        // esto es para que solo sea el primer error el que se muestre
+        return false;
+      }
+    }
+  });
+
+
 
   // slideshow en la home (inicio)
   var buttons = { 
@@ -54,5 +113,4 @@ $(function() {
   })();
 
 });
-
 
