@@ -66,6 +66,7 @@ $(function() {
       if(result) {
         // si todos los numeros estan bien, calculamos el envio
         // TODO: pedir por API el coste de los SMS
+        // GET /api/v1/services/rate
         var cost = parseFloat(count * 0.05).toFixed(2);
         $('#rate span').html(cost + ' €');
         // habilitamos el envio
