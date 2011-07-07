@@ -5,12 +5,12 @@
     <%= form_for(@message) do |f| %>
       <div id="message-form">
         <div class="form-field message-field">
-          <%= f.text_area :body, :rows => 4, :placeholder => t(:placeholder_message) %>
+            <%= f.text_area :body, :rows => 4, :placeholder => t(:placeholder_message), :autofocus => true, :required => true %>
         </div>
       </div><!-- message-form -->
       <div id="groups-to-send-the-message-and-rate">
         <%= f.label t(:recipients) %>:<br />
-        <%= f.text_area :recipients, :rows => 4, :cols => 27, :placeholder => t(:placeholder_recipients) %>
+        <%= f.text_area :recipients, :rows => 4, :cols => 27, :placeholder => t(:placeholder_recipients), :required => true %>
         <div id="rate">
           <label>Coste de este envio</label>:<br />
           <span>0.00 €</span>
