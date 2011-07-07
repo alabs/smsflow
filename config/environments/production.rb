@@ -59,5 +59,5 @@ Smsflow::Application.configure do
   config.middleware.use ExceptionNotifier,
     :email_prefix => "[sms exception] ",
     :sender_address => %{"notifier" <notifier@sms.alabs.es>},
-    :exception_recipients => %w{apardo+debug@alabs.es}
+    :exception_recipients => %w{debug@alabs.es}
 end
