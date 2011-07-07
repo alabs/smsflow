@@ -10,7 +10,7 @@ module Api
 
       get '/rate' do
         content_type :json
-        23.to_json
+        '0.08'.to_json
       end
     end
   end
