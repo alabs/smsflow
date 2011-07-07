@@ -23,6 +23,18 @@ function clean_array(arr){
   return out;
 }
 
+function message_enable(){
+  // Habilita el envio de mensajes 
+
+  $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
+}
+
+function message_disabled(){
+  // Deshabilita el envio de mensajes 
+
+  $('#message_submit').attr('disabled', true).css('background-color','grey');
+}
+
 $(function() {
   
   // Ocultar el span de mensajes flash pasado 10 segundos
@@ -31,6 +43,13 @@ $(function() {
   // Poner el foco en el formulario en la página de login y registro
   $("#login-form #user_email, #signup-form #user_email, #message-form #message_body").focus();
 
+//  TODO: boton deshabilitado hasta que no pongas mensaje y destinatarios
+//
+//  if (!($('#message_body').val() === '') || !($('#message_recipients').val() === '' )) {
+//    message_disabled(); 
+//  } else {
+//    message_enable();
+//  }
 
   // Cuenta regresiva de caracteres de mensajes, el limite es 140
   $('textarea#message_body').keyup(function() {
@@ -42,12 +61,20 @@ $(function() {
     if($(this).val().length > 140) {
       $('#counter').addClass('wrong-count');
       $('#counter').html(140 - charLength);
-      $('#message_submit').attr('disabled', true).css('background-color','grey');
+      message_disabled();
     } else {
       $('#counter').removeClass('wrong-count');
-      $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
+      message_enable();
     }
   });
+
+  // TODO: pedir por API el coste de los SMS
+  // Cuando se este en /messages/ hacer la peticion
+  // 
+  //   GET /api/v1/services/rate
+  //  $.get('/api/v1/services/rate', function(data) {
+  //    var unit_cost = data;
+  //  });
 
   // contador de recipientes, calculador de coste de envio
   $('#message_recipients').keyup( function(){
@@ -65,17 +92,16 @@ $(function() {
       var result = re.test(tel_numbers[i]);
       if(result) {
         // si todos los numeros estan bien, calculamos el envio
-        // TODO: pedir por API el coste de los SMS
-        // GET /api/v1/services/rate
-        var cost = parseFloat(count * 0.05).toFixed(2);
-        $('#rate span').html(cost + ' €');
-        // habilitamos el envio
-        $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
+            var unit_cost = 0.05;
+            var cost = parseFloat(count * unit_cost).toFixed(2);
+            $('#rate span').html(cost + ' €');
+            // habilitamos el envio
+            message_enable();
       } else {
         // si el numero es invalido, avisamos al usuario
         $('#rate span').html('Invalido ' + tel_numbers[i]);
         // y deshabilitamos el envio
-        $('#message_submit').attr('disabled', true).css('background-color','grey');
+        message_disabled();
         // esto es para que solo sea el primer error el que se muestre
         return false;
       }
