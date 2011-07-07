@@ -84,7 +84,7 @@ body {
   margin-right: auto;
   width: 960px; }
 
-.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, #header #top-header #accounts, .grid_6, #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #send-message-buttons, #footer #powered, .grid_7, .grid_8, #content #content-right, #home-columns #home-column-left, #home-columns #home-column-middle, #home-columns #home-column-right, .grid_9, .grid_10, #header #logo, .grid_11, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #new-new-message-form .message-field textarea, .grid_12, #new-new-message-form #message-form, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, .grid_18, #footer #footer-links, .grid_19, #header #top-header #flash-messages, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main, #video-intro {
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #send-message-buttons, #footer #powered, .grid_7, #header #top-header #accounts, .grid_8, #content #content-right, #home-columns #home-column-left, #home-columns #home-column-middle, #home-columns #home-column-right, .grid_9, .grid_10, #header #logo, .grid_11, #login-form .message-field textarea, #signup-form .message-field textarea, #new-message-form .message-field textarea, #new-new-message-form .message-field textarea, .grid_12, #new-new-message-form #message-form, .grid_13, .grid_14, #header #navbar, #content #content-left, .grid_15, .grid_16, .grid_17, #header #top-header #flash-messages, .grid_18, #footer #footer-links, .grid_19, .grid_20, .grid_21, .grid_22, .grid_23, .grid_24, #content #content-main, #video-intro {
   display: inline;
   float: left;
   margin-left: 5px;
@@ -107,11 +107,11 @@ body {
   width: 110px; }
 .container_24 .grid_4, #header .grid_4, #content .grid_4, #footer .grid_4 {
   width: 150px; }
-.container_24 .grid_5, #header .grid_5, #content .grid_5, #footer .grid_5, .container_24 #header #top-header #accounts, #header #top-header .container_24 #accounts, #header #top-header #accounts, #content #header #top-header #accounts, #header #top-header #content #accounts, #footer #header #top-header #accounts, #header #top-header #footer #accounts {
+.container_24 .grid_5, #header .grid_5, #content .grid_5, #footer .grid_5 {
   width: 190px; }
 .container_24 .grid_6, #header .grid_6, #content .grid_6, #footer .grid_6, .container_24 #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form .container_24 #groups-to-send-the-message-and-rate, #header #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #header #groups-to-send-the-message-and-rate, #content #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #content #groups-to-send-the-message-and-rate, #footer #new-new-message-form #groups-to-send-the-message-and-rate, #new-new-message-form #footer #groups-to-send-the-message-and-rate, .container_24 #new-new-message-form #send-message-buttons, #new-new-message-form .container_24 #send-message-buttons, #header #new-new-message-form #send-message-buttons, #new-new-message-form #header #send-message-buttons, #content #new-new-message-form #send-message-buttons, #new-new-message-form #content #send-message-buttons, #footer #new-new-message-form #send-message-buttons, #new-new-message-form #footer #send-message-buttons, .container_24 #footer #powered, #footer .container_24 #powered, #header #footer #powered, #footer #header #powered, #content #footer #powered, #footer #content #powered, #footer #powered {
   width: 230px; }
-.container_24 .grid_7, #header .grid_7, #content .grid_7, #footer .grid_7 {
+.container_24 .grid_7, #header .grid_7, #content .grid_7, #footer .grid_7, .container_24 #header #top-header #accounts, #header #top-header .container_24 #accounts, #header #top-header #accounts, #content #header #top-header #accounts, #header #top-header #content #accounts, #footer #header #top-header #accounts, #header #top-header #footer #accounts {
   width: 270px; }
 .container_24 .grid_8, #header .grid_8, #content .grid_8, #footer .grid_8, .container_24 #content #content-right, #content .container_24 #content-right, #header #content #content-right, #content #header #content-right, #content #content-right, #footer #content #content-right, #content #footer #content-right, .container_24 #home-columns #home-column-left, #home-columns .container_24 #home-column-left, #header #home-columns #home-column-left, #home-columns #header #home-column-left, #content #home-columns #home-column-left, #home-columns #content #home-column-left, #footer #home-columns #home-column-left, #home-columns #footer #home-column-left, .container_24 #home-columns #home-column-middle, #home-columns .container_24 #home-column-middle, #header #home-columns #home-column-middle, #home-columns #header #home-column-middle, #content #home-columns #home-column-middle, #home-columns #content #home-column-middle, #footer #home-columns #home-column-middle, #home-columns #footer #home-column-middle, .container_24 #home-columns #home-column-right, #home-columns .container_24 #home-column-right, #header #home-columns #home-column-right, #home-columns #header #home-column-right, #content #home-columns #home-column-right, #home-columns #content #home-column-right, #footer #home-columns #home-column-right, #home-columns #footer #home-column-right {
   width: 310px; }
@@ -131,11 +131,11 @@ body {
   width: 590px; }
 .container_24 .grid_16, #header .grid_16, #content .grid_16, #footer .grid_16 {
   width: 630px; }
-.container_24 .grid_17, #header .grid_17, #content .grid_17, #footer .grid_17 {
+.container_24 .grid_17, #header .grid_17, #content .grid_17, #footer .grid_17, .container_24 #header #top-header #flash-messages, #header #top-header .container_24 #flash-messages, #header #top-header #flash-messages, #content #header #top-header #flash-messages, #header #top-header #content #flash-messages, #footer #header #top-header #flash-messages, #header #top-header #footer #flash-messages {
   width: 670px; }
 .container_24 .grid_18, #header .grid_18, #content .grid_18, #footer .grid_18, .container_24 #footer #footer-links, #footer .container_24 #footer-links, #header #footer #footer-links, #footer #header #footer-links, #content #footer #footer-links, #footer #content #footer-links, #footer #footer-links {
   width: 710px; }
-.container_24 .grid_19, #header .grid_19, #content .grid_19, #footer .grid_19, .container_24 #header #top-header #flash-messages, #header #top-header .container_24 #flash-messages, #header #top-header #flash-messages, #content #header #top-header #flash-messages, #header #top-header #content #flash-messages, #footer #header #top-header #flash-messages, #header #top-header #footer #flash-messages {
+.container_24 .grid_19, #header .grid_19, #content .grid_19, #footer .grid_19 {
   width: 750px; }
 .container_24 .grid_20, #header .grid_20, #content .grid_20, #footer .grid_20 {
   width: 790px; }
