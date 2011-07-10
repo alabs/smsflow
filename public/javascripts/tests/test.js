@@ -33,7 +33,13 @@ $(function(){
   module("Message button");
   test("Enable", function()
   {
-    message_enable();
+    var body = 'este texto tiene 30 caracteres';
+    $('#message_body').attr('value', body);
+    $('#message_body').trigger('keyup');
+    var recipients = '3455555555 \n 99999999 \n 099444444';
+    $('#message_recipients').attr('value', recipients);
+    $('#message_recipients').trigger('keyup');
+    // rellenando todos los campos se habilita
     result = $('#message_submit').is(':disabled');
     ok( !result, 'Succesfully enable');
   });
