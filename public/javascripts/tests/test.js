@@ -7,32 +7,22 @@ $(function(){
 
  // clean_array(array)
   module("Clean Array Function Test");
-  test("Delete duplicates", function()
+  test("Delete duplicates and empty", function()
   {
     result = clean_array(['hola', 'hola', 'mundo']);
-    ok( result.length == 2, 'Duplicates deleted');
-  });
-
-  module("Clean Array Function Test");
-  test("Delete empty", function()
-  {
+    equals( result.length, 2, 'Duplicates deleted');
     result = clean_array(['hola', '', 'mundo']);
-    ok( result.length == 2, 'Empty deleted');
+    equals( result.length, 2, 'Empty deleted');
   });
 
   // message_disabled()
   module("Message button");
-  test("Disabled", function()
+  test("Disabled and Enable", function()
   {
     message_disabled();
     result = $('#message_submit').is(':disabled');
     ok( result, 'Succesfully disabled');
-  });
-
   // message_enable()
-  module("Message button");
-  test("Enable", function()
-  {
     var body = 'este texto tiene 30 caracteres';
     $('#message_body').attr('value', body);
     $('#message_body').trigger('keyup');
@@ -46,22 +36,17 @@ $(function(){
 
   // charcount de message_body
   module("message_body charcount");
-  test("30 chars", function()
+  test("30 and 155 chars", function()
   {
-    string = 'este texto tiene 30 caracteres';
-    $('#message_body').attr('value', string);
+    var string1 = 'este texto tiene 30 caracteres';
+    $('#message_body').attr('value', string1);
     $('#message_body').trigger('keyup');
-    ok( $('#counter').html() == 30, 'succesfully counted');
-  });
-
-  module("message_body charcount");
-  test("155 chars", function()
-  {
-    var string = 'Este texto tiene 155 caracteres: Vamos a conquistar el mundo con armas de difusion masiva, preparense para la llegada de la democracia real.  Bla bla bla. ';
-    $('#message_body').attr('value', string);
+    equals( $('#counter').html(), 30, 'succesfully counted');
+    var string2 = 'Este texto tiene 155 caracteres: Vamos a conquistar el mundo con armas de difusion masiva, preparense para la llegada de la democracia real.  Bla bla bla. ';
+    $('#message_body').attr('value', string2);
     $('#message_body').trigger('keyup');
-    ok( $('#counter').html() == -15, 'Succesfully counted');
-    ok( $('#counter').attr('class') == 'wrong-count', 'Succesfully classed');
+    equals( $('#counter').html(), -15, 'Succesfully counted');
+    equals( $('#counter').attr('class'), 'wrong-count', 'Succesfully classed');
   });
 
   module("message_recipients telephone count");
