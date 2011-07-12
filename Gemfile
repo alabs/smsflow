@@ -11,10 +11,9 @@ gem 'devise'
 gem 'SystemTimer'
 gem 'redcarpet'
 gem 'exception_notification', :require => 'exception_notifier'
-gem 'tropo-webapi-ruby'
 gem 'sinatra'
 gem 'json'
-gem 'patron'
+gem 'twilio'
 group :test, :development do
    gem 'factory_girl_rails'
 end
