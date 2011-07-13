@@ -5,7 +5,9 @@ function clean_array(arr){
   new_arr = []; 
   for (k in arr) {
     if(arr[k]) {
-      new_arr.push(arr[k]); 
+      // quitamos los espacios en blanco entre valores
+      // ejemplo: ' 44444 ' == '4444'
+      new_arr.push($.trim(arr[k])); 
     } 
   }
 
@@ -23,16 +25,18 @@ function clean_array(arr){
   return out;
 }
 
-function message_enable(){
-  // Habilita el envio de mensajes 
-
-  $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
-}
-
 function message_disabled(){
   // Deshabilita el envio de mensajes 
-
   $('#message_submit').attr('disabled', true).css('background-color','grey');
+}
+
+function message_enable(){
+  // Habilita el envio de mensajes 
+    if ($('#message_recipients').val() === '' || $('#message_body').val() === '') { 
+      message_disabled();
+    } else { 
+      $('#message_submit').attr('disabled', false).css('background-color','#416CC4');
+    } 
 }
 
 $(function() {
@@ -43,16 +47,11 @@ $(function() {
   // Poner el foco en el formulario en la página de login y registro
   $("#login-form #user_email, #signup-form #user_email, #message-form #message_body").focus();
 
-//  TODO: boton deshabilitado hasta que no pongas mensaje y destinatarios
-//
-//  if (!($('#message_body').val() === '') || !($('#message_recipients').val() === '' )) {
-//    message_disabled(); 
-//  } else {
-//    message_enable();
-//  }
+  // Por defecto, deshabilitar el envio de mensajes
+  message_disabled();
 
   // Cuenta regresiva de caracteres de mensajes, el limite es 140
-  $('textarea#message_body').keyup(function() {
+  $('#message_body').keyup(function() {
     var charLength = $(this).val().length;
     // Displays count
     $('#counter').html(charLength);
@@ -78,6 +77,9 @@ $(function() {
 
   // contador de recipientes, calculador de coste de envio
   $('#message_recipients').keyup( function(){
+    if ($('#message_recipients').val() === '') { 
+      message_disabled();
+    } 
     // convertimos las lineas del textarea en un array
     var tel_numbers_raw = $(this).val().split('\n');
     var re = /^\d+$/;
